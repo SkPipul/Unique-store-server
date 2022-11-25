@@ -1,0 +1,17 @@
+[
+    {
+        "categoryName": "Samsung",
+        "categoryId": "1"
+        
+    },
+    {
+        "categoryName": "Iphone",
+        "categoryId": "2"
+        
+    },
+    {
+        "categoryName": "Oneplus",
+        "categoryId": "3"
+    
+    }
+]
