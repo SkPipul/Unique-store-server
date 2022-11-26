@@ -2,67 +2,67 @@
     {
         "categoryId": "1",
         "name": "Samsung Galaxy S22+",
-        "img": "https://images.samsung.com/is/image/samsung/p6pim/levant/2202/gallery/levant-galaxy-s22-plus-s906-412889-sm-s906ezggmea-530961135?$650_519_PNG$",
+        "img": "https://images.samsung.com/is/image/samsung/p6pim/levant/2202/gallery/levant-galaxy-s22Plus-s906-412889-sm-s906ezggmea-530961135?$650_519_PNG$",
         "location": "Chittagong, Bangladesh",
-        "resale-price": 90000,
-        "original-price": 140000,
+        "resalePrice": 90000,
+        "originalPrice": 140000,
         "date": "21 Nov 2022",
         "used": 1,
-        "sellers-name": "Jabed"
+        "sellersName": "Jabed"
     },
     {
         "categoryId": "1",
         "name": "Samsung Galaxy A52",
         "img" : "https://images.unsplash.com/photo-1618214394482-caa124b8ad2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2Ftc3VuZyUyMGdhbGF4eSUyMGE1MnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
         "location": "Khulna, Bangladesh",
-        "resale-price": 22000,
-        "original-price": 35000,
+        "resalePrice": 22000,
+        "originalPrice": 35000,
         "date": "11 Nov 2022",
         "used": 1,
-        "sellers-name": "Karim"
+        "sellersName": "Karim"
     },
     {
         "categoryId": "2",
         "name": "Iphone 13 pro max",
         "img" : "https://images.unsplash.com/photo-1641460228815-1774d9dce009?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8SXBob25lJTIwMTMlMjBwcm8lMjBtYXh8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
         "location": "Dhaka, Bangladesh",
-        "resale-price": 110000,
-        "original-price": 145000,
+        "resalePrice": 110000,
+        "originalPrice": 145000,
         "date": "1 March 2022",
         "used": 1,
-        "sellers-name": "Rahim"
+        "sellersName": "Rahim"
     },
     {
         "categoryId": "2",
         "name": "Iphone 11",
         "img" : "https://images.unsplash.com/photo-1600541519467-937869997e34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8SXBob25lJTIwMTF8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
         "location": "Barishal, Bangladesh",
-        "resale-price": 55000,
-        "original-price": 85000,
+        "resalePrice": 55000,
+        "originalPrice": 85000,
         "date": "7 July 2022",
         "used": 1,
-        "sellers-name": "Kuddus"
+        "sellersName": "Kuddus"
     },
     {
         "categoryId": "3",
         "name": "Oneplus 9 pro",
         "img" : "https://images.unsplash.com/photo-1658321466969-1c45400bb947?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8b25lcGx1cyUyMDklMjBwcm98ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
         "location": "Chittagong, Bangladesh",
-        "resale-price": 45000,
-        "original-price": 80000,
+        "resalePrice": 45000,
+        "originalPrice": 80000,
         "date": "14 Jan 2022",
         "used": 1,
-        "sellers-name": "Alia"
+        "sellersName": "Alia"
     },
     {
         "categoryId": "3",
         "name": "Oneplus Nord N10",
-        "img" : "https://s3b.cashify.in/gpro/uploads/2020/09/17141605/one-plus-nord-n10-5g.png",
+        "img" : "https://s3b.cashify.in/gpro/uploads/2020/09/17141605/onePlusNorsN10-5g.png",
         "location": "Chittagong, Bangladesh",
-        "resale-price": 25000,
-        "original-price": 35000,
+        "resalePrice": 25000,
+        "originalPrice": 35000,
         "date": "19 Oct 2022",
         "used": 1,
-        "sellers-name": "Mofij"
+        "sellersName": "Mofij"
     }
 ]
