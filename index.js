@@ -25,6 +25,7 @@ async function run() {
     const productsCollection = client.db("uniqueStore").collection("products");
     const bookingsCollection = client.db("uniqueStore").collection("bookings");
     const usersCollection = client.db("uniqueStore").collection("users");
+    const advertiseCollection = client.db("uniqueStore").collection("advertise");
 
     app.get("/categories", async (req, res) => {
       const query = {};
@@ -47,6 +48,13 @@ async function run() {
       }
       const result = await productsCollection.find(query).toArray();
       res.send(result);
+    });
+
+    app.delete('/myproducts/:id',async(req, res) => {
+      const id = req.params.id;
+      const filter = {_id: ObjectId(id)};
+      const product = await productsCollection.deleteOne(filter);
+      res.send(product);
     })
 
     app.post('/products', async(req, res) => {
@@ -111,6 +119,24 @@ async function run() {
       const user = req.body;
       const result = await usersCollection.insertOne(user);
       res.send(result)
+    });
+
+    app.delete('/users/user/:id', async(req, res) => {
+      const id = req.params.id;
+      const filter = {_id: ObjectId(id)};
+      const user = await usersCollection.deleteOne(filter);
+      res.send(user);
+    });
+
+    app.get('/advertise', async(req, res) => {
+      const result = await advertiseCollection.find({}).toArray();
+      res.send(result);
+    })
+
+    app.post('/advertise', async(req, res) => {
+      const add = req.body;
+      const result = await advertiseCollection.insertOne(add);
+      res.send(result);
     })
 
   } 
