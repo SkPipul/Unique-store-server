@@ -24,6 +24,7 @@ async function run() {
       .collection("categories");
     const productsCollection = client.db("uniqueStore").collection("products");
     const bookingsCollection = client.db("uniqueStore").collection("bookings");
+    const usersCollection = client.db("uniqueStore").collection("users");
 
     app.get("/categories", async (req, res) => {
       const query = {};
@@ -36,6 +37,23 @@ async function run() {
       const product = await productsCollection.find(query).toArray();
       res.send(product);
     });
+
+    app.get('/myproducts', async(req, res) => {
+      let query = {};
+      if(req.query.email){
+        query = {
+          email: req.query.email
+        }
+      }
+      const result = await productsCollection.find(query).toArray();
+      res.send(result);
+    })
+
+    app.post('/products', async(req, res) => {
+      const product = req.body;
+      const result = await productsCollection.insertOne(product);
+      res.send(result);
+    })
 
     app.get("/products/:id", async (req, res) => {
       const id = req.params.id;
@@ -52,7 +70,12 @@ async function run() {
     });
 
     app.get("/bookings", async (req, res) => {
-      const query = {};
+      let query = {};
+      if(req.query.email){
+        query = {
+          email: req.query.email
+        }
+      }
       const result = await bookingsCollection.find(query).toArray();
       res.send(result);
     });
@@ -64,6 +87,7 @@ async function run() {
         productName: booking.productName,
         originalPrice: booking.originalPrice,
         resalePrice: booking.resalePrice,
+        image: booking.image,
         name: booking.name,
         location: booking.location,
         phone: booking.phone,
@@ -71,7 +95,27 @@ async function run() {
       const result = await bookingsCollection.insertOne(query);
       res.send(result);
     });
-  } finally {
+
+    app.get('/users', async(req, res) => {
+      const result = await usersCollection.find({}).toArray();
+      res.send(result);
+    })
+
+    app.get('/users/user/:email', async(req, res) => {
+      const email = req.params.email;
+      const result = await usersCollection.findOne({email});
+      res.send(result);
+    });
+
+    app.post('/users', async(req, res) => {
+      const user = req.body;
+      const result = await usersCollection.insertOne(user);
+      res.send(result)
+    })
+
+  } 
+
+  finally {
   }
 }
 
