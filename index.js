@@ -61,6 +61,19 @@ async function run() {
       const product = req.body;
       const result = await productsCollection.insertOne(product);
       res.send(result);
+    });
+
+    app.put('/products/:email', async(req, res) => {
+      const email = req.params.email;
+      const filter = { email }
+      const options = { upsert: true }
+      const updateDoc = {
+        $set: {
+          verify: true
+        }
+      }
+      const result = await usersCollection.updateMany(filter, updateDoc, options)
+      res.send(result);
     })
 
     app.get("/products/:id", async (req, res) => {
@@ -106,6 +119,19 @@ async function run() {
 
     app.get('/users', async(req, res) => {
       const result = await usersCollection.find({}).toArray();
+      res.send(result);
+    })
+
+    app.put('/users/user/:id', async(req, res) => {
+      const id = req.params.id;
+      const filter = {_id:ObjectId(id)}
+      const options = { upsert: true }
+      const updateDoc = {
+        $set: {
+          verify: true
+        }
+      }
+      const result = await usersCollection.updateOne(filter, updateDoc, options)
       res.send(result);
     })
 
