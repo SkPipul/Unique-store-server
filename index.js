@@ -63,7 +63,7 @@ async function run() {
       res.send(result);
     });
 
-    app.put('/products/:email', async(req, res) => {
+    app.put('/products/seller/:email', async(req, res) => {
       const email = req.params.email;
       const filter = { email }
       const options = { upsert: true }
